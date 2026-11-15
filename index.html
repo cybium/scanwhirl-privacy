@@ -19,41 +19,70 @@
 </style>
 </head>
 <body>
-<p><span style="font-size: 1.8rem;">ScanWhirl Privacy Policy</span></p>
-<p class="meta">Last updated: November 1, 2026 &middot; App: ScanWhirl (package <code>com.scanwhirl.app</code>) &middot; Developer: Cybium</p>
-<p>This policy explains how the ScanWhirl Android app ("ScanWhirl", "the app", "we") handles your information. In short: <strong>ScanWhirl does not require an account, does not show ads, and does not send your scanned documents to our servers. We do not have servers.</strong></p>
-<h2>1. Information we collect</h2>
-<p>We (the developer) do not collect, store, or receive any personal information from you. Specifically, we do not collect your name, email address, location, contacts, or device identifiers, and we do not run our own analytics or advertising.</p>
-<h2>2. Camera and your scanned documents</h2>
+<p><span style="font-size: 1.8rem;">Privacy Policy for ScanWhirl</span></p>
+<p class="meta">Last updated: 16 November 2026 &middot; App: ScanWhirl (package <code>com.scanwhirl.app</code>) &middot; Developer: Cybium</p>
+
+<h2>The short version</h2>
+<p>ScanWhirl is a document scanner that works on your phone. It has no account, no ads, no analytics and no servers. Nothing you scan leaves your phone unless you choose to share or export it.</p>
+<p>ScanWhirl's own code has <strong>no internet permission</strong>. Android will not let it send anything anywhere.</p>
+
+<h2>What stays on your phone</h2>
+<p>Everything you create stays in ScanWhirl's private storage on your device:</p>
 <ul>
-<li><strong>Camera:</strong> ScanWhirl asks for camera permission only to let you scan documents. The camera is used only while you are scanning.</li>
-<li><strong>Scans and files:</strong> Pages you scan, and any PDFs or images you create, are stored on your device. They are not uploaded to us. You decide whether to keep, share, or delete them.</li>
-<li><strong>Storage:</strong> The app may use storage access to save or export your scans on your device. Files only leave your device if you choose to share them (for example, via email or a messaging app).</li>
+<li>scans, their pages and their PDFs</li>
+<li>the text ScanWhirl reads from your scans</li>
+<li>names, categories, dates and search history</li>
+<li>drafts, signatures, stamps and annotations</li>
+<li>QR and barcode results, including the last 20 you scanned</li>
+<li>your settings, including the Vault passcode hash</li>
 </ul>
-<h2>3. Third-party services</h2>
-<p>ScanWhirl uses the <strong>Google ML Kit Document Scanner</strong>, provided through Google Play services, to detect page edges and enhance scans. Document processing is designed to run on your device. Google may download or update the scanner component over the internet and may collect limited technical and usage data (such as performance metrics, crash information, and device details) in line with Google's policies. See:</p>
+<p>Deleting a document, or uninstalling ScanWhirl, removes this private data from your phone.</p>
+
+<h2>Vault</h2>
+<p>Files you add to the Vault are encrypted on your phone with AES-256. The Vault passcode is not stored, only a salted hash of it is. Fingerprint or face unlock uses Android's biometric prompt and the Android Keystore.</p>
 <ul>
-<li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
-<li><a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a></li>
+<li>Screenshots and screen recording of the Vault are blocked, and the recent apps preview is blank.</li>
+<li>Recovery codes and Wi-Fi passwords copied from ScanWhirl are marked sensitive and cleared from the clipboard after 60 seconds.</li>
+<li>Android cloud backup and device to device transfer are turned off for ScanWhirl. A Vault backup is only made when you ask for one, as an encrypted <code>.swvault</code> file.</li>
 </ul>
-<p>We do not control Google's data practices.</p>
-<h2>4. Permissions used</h2>
+<p>PDFs you protect with a password are encrypted with AES-256 in the standard PDF security format.</p>
+
+<h2>Google Play services</h2>
+<p>Some scanning features are provided by Google Play services on your phone:</p>
 <ul>
-<li><strong>Camera</strong> &ndash; to scan documents.</li>
-<li><strong>Internet / network state</strong> &ndash; so Google Play services can download or update the scanning component.</li>
-<li><strong>Storage</strong> &ndash; to save scans on older Android versions.</li>
+<li>the document scanner (page capture and edge detection)</li>
+<li>English and Latin text recognition</li>
+<li>the QR and barcode scanner</li>
 </ul>
-<h2>5. Sharing of data</h2>
-<p>We do not sell, rent, or share your personal data with anyone, because we do not have it. The only parties involved are Google (see section 3) and any app or person you choose to send your scans to.</p>
-<h2>6. Data retention and deletion</h2>
-<p>Your scans stay on your device until you delete them. Uninstalling the app removes its data from your device. Because we hold no data about you, there is nothing for us to delete on our side.</p>
-<h2>7. Security</h2>
-<p>Your scans are kept in your device's storage and protected by your device's own security (such as your screen lock). No method of storage is perfectly secure, so we recommend keeping your device locked and up to date.</p>
-<h2>8. Children's privacy</h2>
-<p>ScanWhirl is a general-purpose tool and is not directed at children under 13. We do not knowingly collect personal information from anyone.</p>
-<h2>9. Changes to this policy</h2>
-<p>If we change this policy, we will update the "Last updated" date above. Material changes will also be reflected in a new app version.</p>
-<h2>10. Contact</h2>
-<p>Questions about this policy? Email: t.mecybium@gmail.com</p>
+<p>Google Play services runs as a separate app. Google says it processes your images and text on your device and does not send them to Google servers. It may download or update recognition models, and it sends Google diagnostic and usage data about how the feature performs: device and app information (such as phone model, Android version and ScanWhirl's version), a device identifier, performance numbers, event types and error codes. Google encrypts this in transit and does not share it with third parties. That is Google's processing under Google's privacy policy, and ScanWhirl never receives it. Because it happens through features ScanWhirl uses, ScanWhirl's Google Play Data safety section lists it as "Diagnostics" and "Device or other IDs", used for analytics.</p>
+<p>The Hindi (Devanagari) text model is included inside ScanWhirl and works fully offline.</p>
+<ul>
+<li><a href="https://policies.google.com/privacy">Google privacy policy</a></li>
+<li><a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a></li>
+</ul>
+
+<h2>Buying Pro</h2>
+<p>ScanWhirl Pro is a one-time purchase made through Google Play. Google Play handles the payment and your payment details; ScanWhirl never sees them. The app only asks Google Play whether your Google account owns Pro, so Pro can turn on after a reinstall or on another phone with the same account.</p>
+
+<h2>Sharing and saving</h2>
+<p>When you tap Share, Android's share sheet opens and you pick the app or contact. ScanWhirl does not send the file anywhere itself, and it does not keep a copy after sharing beyond a temporary cache file that is deleted on the next start.</p>
+<p>When you tap Save, or turn on the setting to copy PDFs to Documents, the file is written to <code>Documents/ScanWhirl</code> on your phone. Those copies are yours. They stay after you uninstall ScanWhirl until you delete them.</p>
+
+<h2>Deleting</h2>
+<ul>
+<li>Delete a scan from the library at any time. It goes to Trash.</li>
+<li>Trash keeps a deleted scan restorable for 30 days, then deletes it permanently.</li>
+<li>Empty Trash deletes everything in it immediately.</li>
+<li>Uninstalling ScanWhirl removes all of its private data. Copies you saved to Documents stay.</li>
+</ul>
+
+<h2>Children</h2>
+<p>ScanWhirl is not directed at children under 13. ScanWhirl itself collects no personal information from anyone; the Google Play services diagnostics described above apply to every user.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version ships with the next app update and the date above changes.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:cybiumsupport@gmail.com">cybiumsupport@gmail.com</a></p>
 </body>
 </html>
