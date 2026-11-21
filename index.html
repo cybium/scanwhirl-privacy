@@ -20,30 +20,31 @@
 </head>
 <body>
 <p><span style="font-size: 1.8rem;">Privacy Policy for ScanWhirl</span></p>
-<p class="meta">Last updated: 16 November 2026 &middot; App: ScanWhirl (package <code>com.scanwhirl.app</code>) &middot; Developer: Cybium</p>
+<p class="meta">Last updated: 21 November 2026 &middot; App: ScanWhirl (package <code>com.scanwhirl.app</code>) &middot; Developer: Cybium</p>
 
 <h2>The short version</h2>
-<p>ScanWhirl is a document scanner that works on your phone. It has no account, no ads, no analytics and no servers. Nothing you scan leaves your phone unless you choose to share or export it.</p>
-<p>ScanWhirl's own code has <strong>no internet permission</strong>. Android will not let it send anything anywhere.</p>
+<p>ScanWhirl is a document scanner that works on your phone. It has no account, no ads, no analytics and no servers of its own. ScanWhirl itself does not upload your documents. Sharing, exporting, saving or backing up can give files to another app or a destination you choose, including a cloud provider. Google Play services diagnostics are described below.</p>
+<p>ScanWhirl has <strong>no internet permission</strong>, so it cannot make direct internet connections.</p>
 
 <h2>What stays on your phone</h2>
-<p>Everything you create stays in ScanWhirl's private storage on your device:</p>
+<p>ScanWhirl stores the following in its private storage on your device:</p>
 <ul>
 <li>scans, their pages and their PDFs</li>
 <li>the text ScanWhirl reads from your scans</li>
-<li>names, categories, dates and search history</li>
+<li>names, categories and dates</li>
 <li>drafts, signatures, stamps and annotations</li>
 <li>QR and barcode results, including the last 20 you scanned</li>
-<li>your settings, including the Vault passcode hash</li>
+<li>your settings and Vault unlock data</li>
 </ul>
-<p>Deleting a document, or uninstalling ScanWhirl, removes this private data from your phone.</p>
+<p>Deleting a document from the library moves it to Trash. It is removed during app cleanup after 30 days, or when you empty Trash. Uninstalling ScanWhirl removes its private data.</p>
 
 <h2>Vault</h2>
-<p>Files you add to the Vault are encrypted on your phone with AES-256. The Vault passcode is not stored, only a salted hash of it is. Fingerprint or face unlock uses Android's biometric prompt and the Android Keystore.</p>
+<p>Files you add to the Vault are encrypted on your phone with AES-256. The Vault passcode is not stored. A key derived from it with a random salt protects the stored Vault key. Older Vault PINs are stored only as salted hashes. Fingerprint or face unlock uses Android's biometric prompt and the Android Keystore.</p>
 <ul>
 <li>Screenshots and screen recording of the Vault are blocked, and the recent apps preview is blank.</li>
-<li>Recovery codes and Wi-Fi passwords copied from ScanWhirl are marked sensitive and cleared from the clipboard after 60 seconds.</li>
-<li>Android cloud backup and device to device transfer are turned off for ScanWhirl. A Vault backup is only made when you ask for one, as an encrypted <code>.swvault</code> file.</li>
+<li>The Vault re-locks when you return after the app has been in the background for two minutes, or when its process ends. You can also lock it yourself.</li>
+<li>Copied Wi-Fi passwords are marked sensitive on Android 13 and later. ScanWhirl schedules clipboard clearing after 60 seconds, only if the copied text is still there and the app process is running. Vault recovery codes are saved to a file you choose, not copied to the clipboard. Keep that file private: it contains the readable recovery code.</li>
+<li>Android cloud backup and device to device transfer are turned off for ScanWhirl. Backups are only made when you ask. A Vault-only backup is an encrypted <code>.swvault</code> file. Backup &amp; restore makes an AES-256 encrypted <code>.swbackup</code> file, protected by a backup password or Vault recovery code, which you save to a location you choose or share through another app. It can include library documents, text, drafts, signatures, stamps, the encrypted Vault and selected settings. A Vault with unfinished recovery-code confirmation is left out, with a warning. Pro entitlement and device-security settings are not carried in the backup.</li>
 </ul>
 <p>PDFs you protect with a password are encrypted with AES-256 in the standard PDF security format.</p>
 
@@ -62,18 +63,18 @@
 </ul>
 
 <h2>Buying Pro</h2>
-<p>ScanWhirl Pro is a one-time purchase made through Google Play. Google Play handles the payment and your payment details; ScanWhirl never sees them. The app only asks Google Play whether your Google account owns Pro, so Pro can turn on after a reinstall or on another phone with the same account.</p>
+<p>ScanWhirl Pro is a one-time purchase made through Google Play. Google Play handles the payment and your payment details; ScanWhirl never sees them. The app checks Google Play's signature on purchase data and asks Google Play whether your Google account owns Pro, so Pro can turn on after a reinstall or on another phone with the same account. Pro entitlement is not carried in backups.</p>
 
 <h2>Sharing and saving</h2>
-<p>When you tap Share, Android's share sheet opens and you pick the app or contact. ScanWhirl does not send the file anywhere itself, and it does not keep a copy after sharing beyond a temporary cache file that is deleted on the next start.</p>
-<p>When you tap Save, or turn on the setting to copy PDFs to Documents, the file is written to <code>Documents/ScanWhirl</code> on your phone. Those copies are yours. They stay after you uninstall ScanWhirl until you delete them.</p>
+<p>When you tap Share, Android's share sheet opens and you pick the app or contact. ScanWhirl does not upload the file itself. The library original stays unless you delete it. Temporary document share copies are kept so the receiving app can read them, then cleaned up once they are at least 24 hours old, on a later app start or when another share copy is created. This is not a timer that deletes them exactly 24 hours later.</p>
+<p>When you choose Also save in Documents, or turn on the setting to copy PDFs to Documents, the copy is written to <code>Documents/ScanWhirl</code> on your phone. Save as lets you choose a destination in Android's file picker. Copies outside the app's private storage stay after you uninstall ScanWhirl until you or the destination app or provider delete them.</p>
 
 <h2>Deleting</h2>
 <ul>
 <li>Delete a scan from the library at any time. It goes to Trash.</li>
-<li>Trash keeps a deleted scan restorable for 30 days, then deletes it permanently.</li>
+<li>Trash keeps a deleted scan restorable for 30 days, then removes it during app cleanup.</li>
 <li>Empty Trash deletes everything in it immediately.</li>
-<li>Uninstalling ScanWhirl removes all of its private data. Copies you saved to Documents stay.</li>
+<li>Uninstalling ScanWhirl removes all of its private data. Saved, shared and backup copies outside the app's private storage stay until you or the receiving app or provider delete them.</li>
 </ul>
 
 <h2>Children</h2>
